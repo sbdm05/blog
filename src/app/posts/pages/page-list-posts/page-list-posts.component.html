@@ -1,0 +1,16 @@
+
+
+  <div class="card m-3" *ngFor='let i of posts'>
+    <div ngClass={{i.category}} class="card-header">
+      {{i.category}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{i.title}}</h5>
+      <p class="card-text">{{i.content}}</p>
+      <a class="btn btn-warning" (click)='onEdit(i.id)'>Editer</a>
+      <a class="btn btn-danger" (click)='onDelete(i.id)'>Supprimer</a>
+
+    </div>
+</div>
+
+<!-- <div appCategory [cat]='i.category' class="card-header"></div> -->
